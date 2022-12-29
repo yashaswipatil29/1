@@ -1,0 +1,37 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        LinkedList<String>ll=new LinkedList<String>();
+        ll.add("N");
+        ll.add("I");
+        ll.add("K");
+        ll.add("I");
+        ll.add("T");
+        System.out.println("Original Members of Linked List are :"+ll);
+        ll.remove("N");
+        ll.remove(3);
+        System.out.println("Members of Linked List after deletion are :"+ll);
+        System.out.println("Size of list is :"+ll.size());
+    }
+}
+
+class Demo
+{
+    public static void main(String args[])
+    {
+        ArrayList<String>al=new ArrayList<String>();
+        System.out.println("Initial size of al: "+al.size());
+        al.add("T");
+        al.add("H");
+        al.add("U");
+        al.add(0,"B");
+        System.out.println(" size of al after addition: "+al.size());
+        System.out.println("Contents of al :"+al);
+        al.remove("H");
+        al.remove(2);
+        System.out.println("size of al after deletion : "+al.size());
+        System.out.println("Contents of al: "+al);
+    }
+}
