@@ -1,0 +1,41 @@
+import java.util.*;
+class Employee{
+	int empID;
+	String name;
+	double salary,experience;
+
+	void getDetails(){
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter Name");
+			name=sc.nextLine();
+			System.out.println("Enter empID ");
+			empID=sc.nextInt();
+			System.out.println("Enter Salary");
+			salary=sc.nextDouble();
+			System.out.println("Enter your experience");
+			experience=sc.nextDouble();
+	}
+
+	void printDetails(){
+			System.out.println("----------------------------------------1");
+			System.out.println("Name : "+this.name+"\nEmpID :"+this.empID+"\nSalary :"+this.salary+"\nExperience :"+this.experience);
+	}
+}
+class prac16{
+	public static void main(String []args){
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter no of employee: ");
+		n=sc.nextInt();
+		Employee []emp=new Employee[n];
+		for(int i=0;i<emp.length;i++){
+			emp[i]=new Employee();
+			emp[i].getDetails();
+		}
+		for(int i=0;i<emp.length;i++){
+			emp[i].printDetails();
+		}
+
+	}
+}
+
