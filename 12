@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+
+public class main12 {
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        
+        try {
+            System.out.println("Enter your age:");
+             int age=sc.nextInt();
+           if(age>=18){
+            System.out.println("Congratulation ! You are elligible for voting.");
+           }else{
+            throw new Exception("Age Exception Failure");
+           }
+
+        } catch (Exception e) {
+           
+            System.out.println(e);
+        }
+        
+    }
+}
