@@ -1,0 +1,66 @@
+class Employee 
+{ 
+    String name,add,mail;     float id,mobile,basic;     void Salary() 
+    { 
+        float da,hra,pf,cf,gross;         da=basic*97/100;         hra=basic*10/100;         pf=basic*12/100;         cf=basic*0.1f/100;         gross=basic+da+hra-cf-pf; 
+        System.out.println("Name is :"+name); 
+        System.out.println("Mailid is :"+mail); 
+        System.out.println("Basic Salary is :"+basic); 
+        System.out.println("Gross Salary is :"+gross); 
+        System.out.println("\n"); 
+         
+    } 
+} 
+class Programmer extends Employee 
+{ 
+   Programmer(String name,String mail,int sal) 
+   { 
+       System.out.println("Programmer Salary details :");        this.name=name; 
+       basic=sal;        this.mail=mail; 
+   } 
+} 
+class TeamLead extends Employee 
+{ 
+    TeamLead(String name,String mail,int sal) 
+   { 
+       System.out.println("TeamLead Salary details :");        this.name=name; 
+       basic=sal;        this.mail=mail; 
+   } 
+} 
+class APM extends Employee 
+{ 
+    APM(String name,String mail,int sal) 
+   { 
+       System.out.println("APM Salary details :");        this.name=name; 
+       basic=sal;        this.mail=mail; 
+   } 
+} 
+class ProjectManager extends Employee 
+{ 
+    ProjectManager(String name,String mail,int sal) 
+   { 
+       System.out.println("ProjectManager Salary details :");        this.name=name; 
+       basic=sal;        this.mail=mail;    } 
+     
+} 
+class Inheritance 
+{ 
+    public static void main(String[] args) 
+    { 
+     
+        Programmer p= new Programmer("Nikita Thube","nikitathube16062003@gmail.com ",6547);         p.Salary(); 
+         
+        TeamLead t= new TeamLead("Kasturi Thube","kasturithube@gmail.com ",87654);         t.Salary(); 
+         
+        APM A= new APM("Sharvin Thube","sharvinthube@gmail.com ",8723); 
+        A.Salary(); 
+         
+        ProjectManager PM= new ProjectManager("Swanandi Thube","swanandi@gmail.com",98076); 
+        PM.Salary(); 
+    }    
+     
+} 
+ 
+ 
+
+ 
