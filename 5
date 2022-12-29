@@ -1,0 +1,107 @@
+import java.util.*;
+ 
+interface Vehicle
+{
+       public void changeGear(int a);
+       public void speedUp(int a);
+       public void applyBrakes(int a);
+}
+
+class Bicycle implements Vehicle
+{
+     int speed;
+     int gear;
+       public void changeGear(int newGear)
+       {
+           gear= newGear;
+       }
+       public void speedUp(int increment)
+       {
+           speed=speed+increment;
+       }
+       public void applyBrakes(int decrement)
+       {
+           speed=speed-decrement;
+       }
+       
+       public void printStates()
+       {
+           System.out.println("\nspeed:"+speed+"\ngear:"+gear);
+       }
+}
+
+class Bike implements Vehicle
+{
+    int speed;
+    int gear;
+       public void changeGear(int newGear)
+       {
+           gear= newGear;
+       }
+       public void speedUp(int increment)
+       {
+           speed=speed+increment;
+       }
+       public void applyBrakes(int decrement)
+       {
+           speed=speed-decrement;
+       }
+       
+       public void printStates()
+       {
+           System.out.println("\nspeed:"+speed+"\ngear:"+gear);
+       }
+}
+
+class Car implements Vehicle
+{
+    int speed;
+    int gear;
+       public void changeGear(int newGear)
+       {
+           gear= newGear;
+       }
+       public void speedUp(int increment)
+       {
+           speed=speed+increment;
+       }
+       public void applyBrakes(int decrement)
+       {
+           speed=speed-decrement;
+       }
+       
+       public void printStates()
+       {
+           System.out.println("\nspeed:"+speed+"\ngear:"+gear);
+       }
+}
+
+class Interface
+{
+    public static void main(String []args)
+    {
+        Bicycle bicycle=new Bicycle();
+        bicycle.changeGear(10);
+        bicycle.speedUp(20);
+        bicycle.applyBrakes(30);
+        
+        System.out.println("Bicycle present state:\n");
+        bicycle.printStates();
+        
+        Bike bike=new Bike();
+        bike.changeGear(50);
+        bike.speedUp(60);
+        bike.applyBrakes(40);
+        
+        System.out.println("Bike present state:\n");
+        bike.printStates();
+        
+        Car car=new Car();
+        car.changeGear(90);
+        car.speedUp(100);
+        car.applyBrakes(80);
+        
+        System.out.println("Car present state:\n");
+        car.printStates();
+    }
+}
