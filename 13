@@ -1,0 +1,40 @@
+import java.util.*;
+class Stud{
+	String name;
+	int rno,sub1,sub2,sub3,total;
+	double percent;
+
+	void getDetails(){
+		Scanner sc=new Scanner(System.in);
+		System.out.print("\nEnter Roll No :");
+		rno=sc.nextInt();
+		sc.nextLine();
+		System.out.print("\nEnter Name :");
+		name=sc.nextLine();
+		System.out.print("\nEnter marks of sub1 0ut of 100:");
+		sub1=sc.nextInt();
+		System.out.print("\nEnter marks of sub2 0ut of 100:");
+		sub2=sc.nextInt();
+		System.out.print("\nEnter marks of sub3 0ut of 100:");
+		sub3=sc.nextInt();
+
+		total=this.sub1+this.sub2+this.sub3;
+		percent=this.total/3.0;
+	}
+	void printDetails(){
+		System.out.println("-----------------------------------");
+		System.out.println("Name : "+this.name);
+		System.out.println("Roll : "+this.rno);
+		System.out.println("Total : "+this.total);
+		System.out.println("Percentage : "+this.percent);
+		System.out.println("-----------------------------------");
+	}
+}
+class prac13{
+	public static void main(String []args){
+		Stud st=new Stud();
+		st.getDetails();
+		st.printDetails();
+	}
+}
+
