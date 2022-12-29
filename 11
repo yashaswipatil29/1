@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+import javax.naming.AuthenticationException;
+
+public class main11{
+    public static void main(String[] args) {
+        String password="shubh@n44";
+        Scanner sc=new Scanner(System.in);
+
+        try {
+        System.out.println("Enter your password:");
+        String pass=sc.next();
+            if(pass.equals(password)){
+                System.out.println("login successfully");
+            }else{
+                throw new AuthenticationException("authentification failure");
+            }
+        } catch (Exception e) {
+            
+            System.out.println(e);
+            System.out.println("You have entered a wrong password");
+        }
+    }
+}
